@@ -17,9 +17,10 @@ shutil.copytree(SOURCE, OUTPUT)
 
 index = OUTPUT / "index.html"
 html = index.read_text(encoding="utf-8")
-# GitHub Pages serves project sites from /<repository>/, so root-absolute assets
-# would otherwise resolve outside this portfolio. Keep deployed asset paths relative.
-html = html.replace('="/assets/', '="assets/')
+# GitHub Pages serves project sites from /<repository>/, so root-absolute
+# resources (styles, script, résumé, and case-study assets) would otherwise
+# resolve outside this portfolio. Keep every local resource path relative.
+html = html.replace('="/', '="')
 index.write_text(html, encoding="utf-8")
 
 print(f"Prepared GitHub Pages artifact in {OUTPUT}")
