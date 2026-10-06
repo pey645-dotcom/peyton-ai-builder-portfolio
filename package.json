@@ -1,0 +1,10 @@
+{
+  "name": "peyton-manus-tam-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A six-page micro-portfolio for Peyton Webster’s Technical Account Manager outreach to Manus.",
+  "scripts": {
+    "start": "python3 -m http.server 5173 --bind 127.0.0.1 --directory public",
+    "check": "node --check public/app.js"
+  }
+}
