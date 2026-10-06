@@ -19,3 +19,7 @@ Then open [http://127.0.0.1:5173](http://127.0.0.1:5173).
 - **Market Technology Workspace** — an AI-assisted intake and technical-routing prototype.
 
 The ClinTranslate demo included in `public/assets/` is the sanitized, output-preserving public version.
+
+## GitHub Pages
+
+The repository includes a GitHub Actions workflow that deploys the static site to GitHub Pages from every push to `main`. The deployment builder preserves the portfolio’s root `public/` source while converting root-absolute asset paths to project-relative paths for the GitHub Pages URL.
